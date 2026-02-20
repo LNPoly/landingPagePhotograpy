@@ -150,7 +150,7 @@ main{
 
 .hero::before {
     content: '';
-    background-image: url("/img/city-buildings-bw.jpg");
+    background-image: url("./img/city-buildings-bw.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
