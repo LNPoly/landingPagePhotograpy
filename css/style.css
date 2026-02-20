@@ -1,0 +1,432 @@
+/* --- RESET & BASE --- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: black;
+    --text-main: white;
+    --holo-gradient: linear-gradient(45deg, #ff6ec4, #7873f5, #4ade80);
+    --gold-gradient: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- UTILITIES --- */
+.gold-hover {
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    display: inline-block; 
+}
+
+.gold-hover:hover {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+}
+
+/* --- Estado cuando el dedo está presionando (Móvil) --- */
+.gold-hover:active {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(0.9); 
+    transition: transform 0.1s;
+}
+
+/* --- Clase para la opción que queda seleccionada --- */
+.nav-active {
+    background: var(--gold-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/* --- 1. EL CURSOR PERSONALIZADO (Solo para pantallas grandes) --- */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #D4AF37;
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none; /* Importante: para que no interfiera con los clicks */
+    z-index: 9999;
+    transition: transform 0.1s ease-out;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+/* --- HEADER --- */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    position: relative;
+    background: #050505; 
+}
+
+/* Efecto Brillo Scanner (Compartido) */
+header::after, .hero::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background: linear-gradient(90deg, transparent 0%, transparent 40%, #fff 50%, #D4AF37 55%, transparent 60%, transparent 100%);
+    background-size: 200% 100%;
+    animation: scanner-light 10s linear infinite;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5); 
+}
+
+@keyframes scanner-light {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+header .logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--text-main);
+
+}
+    
+nav div a {
+    color: var(--text-main);
+    margin: 0 20px;
+    font-size: 1.5rem;
+}
+
+/* Menú Hamburguesa */
+
+
+.menu-toggle {
+    display: none; /* Se oculta en pantallas grandes */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 100;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: var(--text-main);
+    transition: all 0.3s ease;
+}
+
+/* --- MAIN LAYOUT --- */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- HERO SECTION --- */
+.hero{
+    width: 100%;
+    height: 100vh;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    background-image: url("/img/city-buildings-bw.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.hero h1{
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+    color: white;
+}
+.hero p, .about p{
+    margin-top: 20px;
+    width: 80%;
+    font-size: 1.2rem;
+    color: var(--text-main);
+    text-align: center;
+}
+
+/* --- BUTTONS --- */
+.button{
+    display: inline-block;
+    margin-top: 50px;
+}
+
+.btn {
+    background-color: #333;
+    color: white;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    border-color: #D4AF37;
+    background-color: transparent;
+    color: #D4AF37;
+    box-shadow: 5px 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* --- SECTIONS --- */
+.about, .works, .services, .contact{
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.gallery-item img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: 0.4s;
+    filter: grayscale(100%);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color:var(--text-main);
+    text-align: center;
+}
+
+.gallery-item img:hover {
+    filter: grayscale(0%);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    opacity: 80%;
+}
+
+/* --- SERVICES SECTION --- */
+.services .button {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.services .button .btn {
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* --- CONTACT SECTION --- */
+.contact {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact .icons {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.contact .icons a {
+    color: var(--text-main);
+    font-size: 2.5rem;
+}
+
+.contact form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form input, .contact form textarea {
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background: var(--gold-gradient);
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact form button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+}
+
+/* --- FOOTER --- */
+footer{
+    padding: 40px;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: #666;
+}
+
+/* =============================================
+   SECTOR RESPONSIVE (MÓVIL < 768px)
+   ============================================= */
+@media screen and (max-width: 768px) {
+    
+    .custom-cursor { display: none; }
+
+    /* Hamburguesa */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menu-toggle .bar {
+        width: 30px;
+        height: 2px;
+        background-color: var(--text-main);
+        transition: 0.3s;
+    }
+
+    /* El Menú Lateral (Overlay) */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: rgba(5, 5, 5, 0.98);
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 900;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    /* Contenedor de links en móvil */
+    nav div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    /*Efecto Cascada (Staggered Animation) */
+    nav .menu-link {
+        font-size: 2rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu-link {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /*Tiempos de cascada */
+    nav.active .menu-link:nth-child(1) { transition-delay: 0.1s; }
+    nav.active .menu-link:nth-child(2) { transition-delay: 0.2s; }
+    nav.active .menu-link:nth-child(3) { transition-delay: 0.3s; }
+    nav.active .menu-link:nth-child(4) { transition-delay: 0.4s; }
+
+    /* Feedback de Click */
+    .menu-link.clicked {
+        background: var(--gold-gradient) !important;
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+        padding: 5px 20px;
+        border-radius: 5px;
+    }
+
+    /*Animación de Hamburguesa a X */
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /*Reajustes de Secciones para Móvil */
+    header, .hero, .about, .works, .services, .contact {
+        padding: 20px;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    .about p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .gallery-item img {
+        width: 100%; height: auto;
+    }
+    .gallery-item p{
+        text-align: center;
+    }
+    .services .button{
+        display: flex;
+        flex-direction: column;
+    }
+    .services .button a {
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .contact {
+        width: 90%;
+    }
+}
