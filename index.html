@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>PHOTOGRAPHY | DESIGN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>EZEQUIEL | CATTOL</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -18,33 +19,52 @@
         </div>
         <nav id="nav-menu">
             <div>
-                <a href="#about" class="menu-link gold-hover">About</a>
-                <a href="#works" class="menu-link gold-hover">Works</a>
-                <a href="#services" class="menu-link gold-hover">Services</a>
-                <a href="#contact" class="menu-link gold-hover">Contact</a>
+                <a href="#about" class="menu-link gold-hover">Sobre Mi</a>
+                <a href="#works" class="menu-link gold-hover">Mis Trabajos</a>
+                <a href="#services" class="menu-link gold-hover">Servicios</a>
+                <a href="#contact" class="menu-link gold-hover">Contacto</a>
             </div>
         </nav>
     </header>
 
     <main>
         <section class="hero" id="hero">
-            <h1>PHOTOGRAPHY | DESIGN</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, voluptate.</p>
-            <div class="button">
-                <a href="#" class="btn">View Work</a>
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="bg-img" style="background-image: url('./img/city-buildings-bw.jpg');"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-img" style="background-image: url('./img/photo2.jpg');"></div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="bg-img" style="background-image: url('./img/photo3.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <h1>EZEQUIEL | CATTOL</h1>
+                <h2>Fotógrafo Profesional</h2>
+                <p>Capturando momentos únicos con una visión profesional.</p>
+                <div class="button">
+                    <a href="#" class="btn">Ver Trabajos</a>
+                </div>
             </div>
         </section>
 
         <section class="about" id="about">
-            <h2>About Me</h2>
-            <p>I am a professional photographer specializing in landscape and portrait photography. My work focuses on capturing the essence of moments and emotions through a unique lens perspective.</p>
+            <h2>Sobre mí</h2>
+            <p class="about-p">Soy un fotógrafo profesional especializado en fotografía de paisajes y retratos. Mi trabajo se enfoca en capturar la esencia de los momentos y emociones a través de una perspectiva única con la cámara.</p>
             <div class="button">
-                <a href="#" class="btn">Read More</a>
+                <a href="./pages/aboutMe.html" class="btn">Leer Más</a>
             </div>
         </section>
 
         <section class="works" id="works">
-            <h2>My Works</h2>
+            <h2>Mis Trabajos</h2>
             <div class="gallery">
                 <div class="gallery-item">
                     <img src="./img/photo1.jpg" alt="Photo 1">
@@ -62,21 +82,18 @@
         </section>
 
         <section class="services" id="services">
-            <h2>Services</h2>
+            <h2>Servicios</h2>
             <div class="button">
-                <a href="#" class="btn">Portraits</a>
-                <a href="#" class="btn">Landscapes </a>
-                <a href="#" class="btn">Events</a>
-                <a href="#" class="btn">Photo Editing</a>
+                <a href="#" class="btn">Eventos</a>
+                <a href="#" class="btn">Edición de Fotos</a>
             </div>
         </section>
 
         <section class="contact" id="contact">
-            <h2>Contact Me</h2>
+            <h2>Contacto</h2>
             <div class="icons">
-                <a href="#" class="gold-hover"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="gold-hover"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="gold-hover"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/ezequielcattol96/" class="gold-hover"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:ezequielcattol@gmail.com" target="_blank" class="gold-hover"><i class="fa-regular fa-envelope"></i></a>
             </div>
             <form>
                 <input type="text" placeholder="Your Name" required>
@@ -85,11 +102,14 @@
                 <button type="submit">Send Message</button>
             </form>
         </section>
+        <a href="https://api.whatsapp.com/send?phone=5491154705653&text=Hola,%20soy%20[tu nombre]%20"><img class="fixed-whatsapp-button" src="/img/whatsapp2.svg"/></a>
+
     </main>
 
     <footer>
-        <p>&copy; 2024 PHOTOGRAPHY | DESIGN. All rights reserved.</p>
+        <p>&copy; 2026 PHOTOGRAPHY | DESIGN. All rights reserved.</p>
     </footer>
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
