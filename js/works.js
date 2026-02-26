@@ -1,27 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const filters = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.gallery-item');
+    const links = document.querySelectorAll('.sub-menu-link');
+    const sections = document.querySelectorAll('.works-section');
 
-    filters.forEach(button => {
-        button.addEventListener('click', () => {
-            // 1. Manejar la clase activa en los botones
-            filters.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    // Función para cambiar de pestaña
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
 
-            const target = button.getAttribute('data-target');
+            links.forEach(l => l.classList.remove('active-link'));
+            sections.forEach(s => s.classList.remove('active'));
 
-            // 2. Filtrar las imágenes
-            items.forEach(item => {
-                if (target === 'all') {
-                    item.classList.remove('hide');
-                } else {
-                    if (item.classList.contains(target)) {
-                        item.classList.remove('hide');
-                    } else {
-                        item.classList.add('hide');
-                    }
-                }
-            });
+            link.classList.add('active-link');
+
+            const targetId = link.getAttribute('href'); 
+            const targetSection = document.querySelector(targetId);
+
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
         });
-    });
-});
+    });  
+
+    // Opcional: Activar la primera pestaña por defecto al cargar la página
+    // if (links.length > 0) {
+    //     links[0].click();
+    // }
+});  

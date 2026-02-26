@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <title>EZEQUIEL | CATTOL</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/modal.css">
 </head>
 <body>
     
@@ -19,10 +20,10 @@
         </div>
         <nav id="nav-menu">
             <div>
-                <a href="#about" class="menu-link gold-hover">Sobre Mi</a>
-                <a href="#works" class="menu-link gold-hover">Mis Trabajos</a>
-                <a href="#services" class="menu-link gold-hover">Servicios</a>
-                <a href="#contact" class="menu-link gold-hover">Contacto</a>
+                <a href="#about" class="menu-link accent-hover">Sobre Mi</a>
+                <a href="#works" class="menu-link accent-hover">Mis Trabajos</a>
+                <a href="#services" class="menu-link accent-hover">Servicios</a>
+                <a href="#contact" class="menu-link accent-hover">Contacto</a>
             </div>
         </nav>
     </header>
@@ -32,13 +33,13 @@
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="bg-img" style="background-image: url('./img/city-buildings-bw.jpg');"></div>
+                        <div class="bg-img" style="background-image: url('./img/photo1-background.jpg');"></div>
                     </div>
                     <div class="carousel-item">
-                        <div class="bg-img" style="background-image: url('./img/photo2.jpg');"></div>
+                        <div class="bg-img" style="background-image: url('./img/2.jpeg');"></div>
                     </div>
                     <div class="carousel-item">
-                        <div class="bg-img" style="background-image: url('./img/photo3.jpg');"></div>
+                        <div class="bg-img" style="background-image: url('./img/3.jpg');"></div>
                     </div>
                 </div>
             </div>
@@ -46,11 +47,11 @@
             <div class="hero-overlay"></div>
 
             <div class="hero-content">
-                <h1>EZEQUIEL | CATTOL</h1>
+                <h1>EZEQUIEL CATTOL</h1>
                 <h2>Fotógrafo Profesional</h2>
                 <p>Capturando momentos únicos con una visión profesional.</p>
                 <div class="button">
-                    <a href="#" class="btn">Ver Trabajos</a>
+                    <a href="#works" class="btn">Ver Trabajos</a>
                 </div>
             </div>
         </section>
@@ -65,51 +66,164 @@
 
         <section class="works" id="works">
             <h2>Mis Trabajos</h2>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="./img/photo1.jpg" alt="Photo 1">
-                    <p>Caption for Photo 1</p>
+            <div class="sub-nav">
+                <a href="#era1" class="sub-menu-link">Era 1</a>
+                <a href="#era2" class="sub-menu-link">Era 2</a>
+                <a href="#era3" class="sub-menu-link">Era 3</a>
+            </div>
+            <div id="era1" class="works-section">
+                <!-- <h3>Eventos</h3> -->
+                <div class="works-grid">
+                    <div class="work-item">
+                        <a href="./img/street.jpeg" target="_blank" rel="noopener noreferrer"><img src="./img/street.jpeg" alt="Event 1"></a>
+                        <h4>Evento 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/3.jpg" target="_blank" rel="noopener noreferrer"><img src="./img/3.jpg" alt="Event 2"></a>
+                        <h4>Evento 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/1.jpg" target="_blank" rel="noopener noreferrer"><img src="/img/1.jpg" alt="Event 3"></a>
+                        <h4>Evento 3</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/retrato.jpg" target="_blank" rel="noopener noreferrer"><img src="./img/retrato.jpg" alt="Event 3"></a>
+                        <h4>Evento 4</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/3.jpg" target="_blank" rel="noopener noreferrer"><img src="./img/3.jpg" alt="Event 3"></a>
+                        <h4>Evento 5</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="./img/photo2.jpg" alt="Photo 2">
-                    <p>Caption for Photo 2</p>
+            </div>
+
+            <div id="era2" class="works-section">
+                <!-- <h3>Foto Edición</h3> -->
+                <div class="works-grid">
+                    <div class="work-item">
+                        <a href="/img/street.jpeg" target="_blank" rel="noopener noreferrer"><img src="./img/street.jpeg" alt="Event 1"></a>
+                        <h4>foto 1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/3.jpg" target="_blank" rel="noopener noreferrer"><img src="./img/3.jpg" alt="Event 2"></a>
+                        <h4>foto 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/lion.jpeg" target="_blank" rel="noopener noreferrer"><img src="./img/lion.jpeg" alt="Event 3"></a>
+                        <h4>foto 3</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="./img/photo3.jpg" alt="Photo 3">
-                    <p>Caption for Photo 3</p>
+            </div>
+
+            <div id="era3" class="works-section">
+                <!-- <h3>Retratos</h3> -->
+                <div class="works-grid">
+                    <div class="work-item">
+                        <a href="/img/retrato.jpg" target="_blank" rel="noopener noreferrer"><img src="./img/retrato.jpg" alt="Event 1"></a>
+                        <h4>retrato1</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/1.jpg" target="_blank" rel="noopener noreferrer"><img src="/img/1.jpg" alt="Event 2"></a>
+                        <h4>retrato 2</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
+                    <div class="work-item">
+                        <a href="/img/nube-en-blanco-y-negro.jpg" target="_blank" rel="noopener noreferrer"><img src="/img/nube-en-blanco-y-negro.jpg" alt="Event 3"></a>
+                        <h4>retrato 3</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus ipsam aperiam velit architecto repellat dolores enim tempora quae facilis!</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section class="services" id="services">
             <h2>Servicios</h2>
-            <div class="button">
+            <!-- <div class="button">
                 <a href="#" class="btn">Eventos</a>
                 <a href="#" class="btn">Edición de Fotos</a>
+            </div> -->
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h4>EVENTOS</h4>
+                    <div class="grid-sub-item">
+                        <h5>Casamientos</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, obcaecati.</p>
+                        <h5>Importe</h5>
+                        <p>$1400000</p>
+                    </div>
+                    <div class="grid-sub-item">
+                        <h5>Bautismos</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, obcaecati.</p>
+                        <h5>Importe</h5>
+                        <p>$1300000</p>
+                    </div>
+                    <div class="grid-sub-item">
+                        <h5>Otros</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, obcaecati.</p>
+                        <h5>Importe</h5>
+                        <p>$1250000</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <h4>EDICION DE FOTOS</h4>
+                    <div class="grid-sub-item">
+                        <h5>Completa</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, obcaecati.</p>
+                        <h5>Importe</h5>
+                        <p>$35000</p>
+                    </div>
+                    <div class="grid-sub-item">
+                        <h5>Parcial</h5>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam, obcaecati.</p>
+                        <h5>Importe</h5>
+                        <p>$10000</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section class="contact" id="contact">
             <h2>Contacto</h2>
             <div class="icons">
-                <a href="https://www.instagram.com/ezequielcattol96/" class="gold-hover"><i class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:ezequielcattol@gmail.com" target="_blank" class="gold-hover"><i class="fa-regular fa-envelope"></i></a>
+                <a href="https://www.instagram.com/ezequielcattol96/" class="accent-hover"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:ezequielcattol@gmail.com" target="_blank" class="accent-hover"><i class="fa-regular fa-envelope"></i></a>
             </div>
             <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
+                <div class="inputs">
+                    <input type="text" placeholder="Tu nombre" required>
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <textarea placeholder="Escribe algo" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
             </form>
         </section>
         <a href="https://api.whatsapp.com/send?phone=5491154705653&text=Hola,%20soy%20[tu nombre]%20"><img class="fixed-whatsapp-button" src="/img/whatsapp2.svg"/></a>
-
+        <div class="btn-return-home">
+            <a href="#">Volver al inicio</a>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2026 PHOTOGRAPHY | DESIGN. All rights reserved.</p>
     </footer>
-    <script src="./js/script.js"></script>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="fullImage">
+        <div id="caption"></div>
+    </div>
+    <script src="/js/script.js"></script>
+    <script src="/js/works.js"></script>
+    <script src="/js/modal.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>
